@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Different from "./components/Different";
+import FindOut from "./components/FindOut";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <main>
+        <Home />
+        <Different />
+        <FindOut />
+        <Footer />
+      </main>
+    </Container>
   );
 }
 
-export default App;
+const Container = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
+`;
